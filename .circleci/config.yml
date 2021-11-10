@@ -11,6 +11,7 @@ jobs:
       - image: ubuntu:latest
     steps:
       - checkout
+      - run: echo "I'm the coolest"
       - run: echo "content" >> file.txt
       - save_cache:
           key: "the-key"
