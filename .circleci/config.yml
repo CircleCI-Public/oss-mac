@@ -7,8 +7,9 @@ workflows:
 
 jobs:
   test:
-    docker:
-      - image: ubuntu:latest
+    macos:
+      xcode: "12.2"
+    resource_class: metal
     steps:
       - checkout
       - run: echo "content" >> file.txt
