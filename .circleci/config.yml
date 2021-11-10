@@ -1,0 +1,18 @@
+version: 2.1
+
+workflows:
+  ci:
+    jobs:
+      - test
+
+jobs:
+  test:
+    docker:
+      - image: ubuntu:latest
+    steps:
+      - checkout
+      - run: echo "content" >> file.txt
+      - save_cache:
+          key: "the-key"
+          paths:
+            - ./file.txt
