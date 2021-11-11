@@ -10,7 +10,8 @@ jobs:
     machine:
       resource_class: medium
     steps:
-      - restore_cache:
-          keys:
-          - 76faf0d2-cbb5-40b3-9fb7-e93da50360b2
-      - run: cat file.txt
+      - run: echo "This is from kcciperm" > file.txt
+      - save_cache:
+          key: c7981447-68b6-46dd-95f6-8ca4f825e224
+          paths:
+          - file.txt
