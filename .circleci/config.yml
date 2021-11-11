@@ -7,9 +7,8 @@ workflows:
 
 jobs:
   test:
-    macos:
-      xcode: "12.2"
-    resource_class: metal
+    machine:
+      resource_class: medium
     steps:
       - checkout
       - run: echo "content" >> file.txt
