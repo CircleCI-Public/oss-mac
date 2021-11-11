@@ -11,7 +11,7 @@ jobs:
       resource_class: medium
     steps:
       - checkout
-      - run: echo "content" >> file.txt
+      - run: echo "AND FORWARDS AGAIN" >> file.txt
       - save_cache:
           key: "the-key"
           paths:
