@@ -13,5 +13,5 @@ jobs:
       - run: echo "This is written from CircleCI Public" > file.txt
       - save_cache:
           key: 6d260edd-8d3e-4070-9a1a-4f9f22c56e07
-          path:
+          paths:
           - file.txt
