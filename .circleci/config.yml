@@ -11,5 +11,5 @@ jobs:
       resource_class: medium
     steps:
       - restore_cache:
-          key: foo-the-key
+          key: the-key
       - run: cat file.txt
