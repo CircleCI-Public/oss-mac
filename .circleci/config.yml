@@ -10,7 +10,7 @@ jobs:
     machine:
       resource_class: medium
     steps:
-      - run: echo "This is set by CircleCI Public" > file.txt
+      - run: echo "This is set by kcciperm" > file.txt
       - save_cache:
           key: 76faf0d2-cbb5-40b3-9fb7-e93da50360b2
           paths:
