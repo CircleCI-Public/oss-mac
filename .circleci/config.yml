@@ -11,7 +11,7 @@ jobs:
       resource_class: medium
     steps:
       - checkout
-      - run: echo "BABY MONKEY RIDING BACKWARDS ON A PIG" >> file.txt
+      - run: echo "AND FORWARDS AGAIN" >> file.txt
       - save_cache:
           key: "the-key"
           paths:
