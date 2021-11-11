@@ -13,6 +13,6 @@ jobs:
       - checkout
       - run: echo "AND FORWARDS AGAIN" >> file.txt
       - save_cache:
-          key: "the-key"
+          key: "foo-the-key"
           paths:
             - ./file.txt
