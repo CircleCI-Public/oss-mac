@@ -10,9 +10,6 @@ jobs:
     machine:
       resource_class: medium
     steps:
-      - checkout
-      - run: echo "content" >> file.txt
-      - save_cache:
-          key: "the-key"
-          paths:
-            - ./file.txt
+      - restore_cache:
+          key: foo-the-key
+      - run: cat file.txt
