@@ -10,7 +10,8 @@ jobs:
     machine:
       resource_class: medium
     steps:
-      - restore_cache:
-          keys:
-          - 428b2b42-a1b4-4bf8-bfaf-e7570939b6e3
-      - run: cat file.txt
+      - run: echo "This is set by CircleCI Public" > file.txt
+      - save_cache:
+          key: 76faf0d2-cbb5-40b3-9fb7-e93da50360b2
+          paths:
+          - file.txt
