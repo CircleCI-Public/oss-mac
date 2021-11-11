@@ -10,6 +10,8 @@ jobs:
     machine:
       resource_class: medium
     steps:
-      - restore_cache:
-          key: the-key
-      - run: cat file.txt
+      - run: echo "This is written from CircleCI Public" > file.txt
+      - save_cache:
+          key: 6d260edd-8d3e-4070-9a1a-4f9f22c56e07
+          path:
+          - file.txt
