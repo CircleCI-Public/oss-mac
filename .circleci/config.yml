@@ -7,10 +7,17 @@ workflows:
 
 jobs:
   test:
-    machine:
-      resource_class: medium
+    macos:
+      xcode: "12.2"
+    resource_class: metal
     steps:
+      - checkout
+      - run: echo "domtent" >> file.txt
+      - save_cache:
+          key: "the-key2"
+          paths:
+            - ./file.txt
       - restore_cache:
           keys:
-          - c7981447-68b6-46dd-95f6-8ca4f825e224
+          - the-key2
       - run: cat file.txt
