@@ -7,11 +7,12 @@ workflows:
 
 jobs:
   test:
-    machine:
-      resource_class: medium
+    macos:
+      xcode: "12.2"
+    resource_class: metal
     steps:
       - checkout
-      - run: echo "content" >> file.txt
+      - run: echo "domtent" >> file.txt
       - save_cache:
           key: "the-key2"
           paths:
